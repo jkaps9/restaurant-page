@@ -7,18 +7,39 @@ export const menuload = (function () {
 
         contentContainer.appendChild(header);
 
+        const menuContainer = document.createElement("div");
+        menuContainer.classList.add("menu-container");
+
         const menuItems = [
             {
                 name: "Sip of Coffee",
-                description: "A taste of our signature coffee brewed with arabica beans roasted to perfection.",
+                description: "A taste of our signature coffee brewed with arabica beans roasted to perfection",
                 price: "$0.50"
+            },
+            {
+                name: "Sip of Tea",
+                description: "A taste of our signature hot teas with your choice of flavor",
+                price: "$0.50"
+            },
+            {
+                name: "Sip of Iced Tea",
+                description: "A taste of our freshly brewed iced tea",
+                price: "$0.75"
+            },
+            {
+                name: "Bite of Lemon Blueberry Scone",
+                description: "A taste of our freshly baked lemon blueberry scones",
+                price: "$1.25"
             }
         ];
 
+
         for (let i = 0; i < menuItems.length; i++) {
             const menuItem = createMenuItem(menuItems[i].name, menuItems[i].description, menuItems[i].price);
-            contentContainer.append(menuItem);
+            menuContainer.append(menuItem);
         }
+
+        contentContainer.appendChild(menuContainer);
     };
 
     const createMenuItem = (name, description, price) => {
