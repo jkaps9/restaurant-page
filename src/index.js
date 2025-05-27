@@ -1,5 +1,6 @@
 import "./styles.css";
 import { pageload } from "./pageload.js";
+import { menuload } from "./menu.js";
 
 console.log("JavaScript is running, you better go catch it!");
 pageload.run()
@@ -22,6 +23,7 @@ homeButton.addEventListener('click', () => {
 
 menuButton.addEventListener('click', () => {
     clearDiv();
+    menuload.run();
 });
 
 contactButton.addEventListener('click', () => {
