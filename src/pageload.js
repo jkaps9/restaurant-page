@@ -3,7 +3,6 @@ import coffeeImage from "./coffee-mugs.webp";
 export const pageload = (function () {
     const run = () => {
         const contentContainer = document.querySelector("#content");
-        console.log(contentContainer);
 
         const header = document.createElement("h1");
         header.textContent = "Just A Sip";
